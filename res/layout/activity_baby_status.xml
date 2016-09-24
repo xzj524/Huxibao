@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+   <fragment 
+        android:id="@+id/topViewFragment"
+        android:name="com.aizi.xiaohuhu.titlefragment.BabyStatusTopViewFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+         android:layout_marginTop="20dp"/> 
+
+  <ScrollView 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+       android:layout_below="@id/topViewFragment">
+       
+       <LinearLayout 
+           android:id="@+id/babylist"
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:orientation="vertical">
+           
+           <fragment 
+		        android:id="@+id/babySleepPieChartFragment"
+		        android:name="com.aizi.xiaohuhu.chart.SleepyPieChart"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:tag="piechart"/>
+	           
+	      <fragment 
+		        android:id="@+id/babySleepChartFragment"
+		        android:name="com.aizi.xiaohuhu.chart.SleepyChart"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"/>
+	      
+
+	       
+	        <fragment 
+		        android:id="@+id/babytemperatureChartFragment"
+		        android:name="com.aizi.xiaohuhu.chart.TemperatureChart"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="20dp"/>
+       </LinearLayout>
+  
+     
+   </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+ 
+    <RelativeLayout
+        android:id="@+id/connectingRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" >
+
+        <ImageView
+            android:id="@+id/connectImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/tuoyuan" />
+
+        <ImageView
+            android:id="@+id/progressImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/lightline2" />
+        
+         <LinearLayout
+            android:id="@+id/clicktostart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+	       <TextView
+	           android:id="@+id/clicktodeviceconnected"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_gravity="center_horizontal"
+	           android:text="@string/click_start" />
+        </LinearLayout>
+        
+          <LinearLayout
+            android:id="@+id/syncDataLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+	       <TextView
+	           android:id="@+id/syncDataTextView"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_gravity="center_horizontal"
+	           android:text="@string/sync_data" />
+        </LinearLayout>
+
+       <LinearLayout
+            android:id="@+id/connectInfoLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+	       <TextView
+	           android:id="@+id/checkingNetworkTextView"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_gravity="center_horizontal"
+	           android:text="@string/start_connect" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/connectedSucceedLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+             <TextView
+                android:id="@+id/connectedStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center_horizontal"
+                android:lineSpacingExtra="2dp"
+				android:lineSpacingMultiplier="1"
+                android:gravity="center_horizontal"
+                android:text="@string/connecting_device_success" />
+
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/connectedFailedLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+             <TextView
+                android:id="@+id/connectedFailedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center_horizontal"
+                android:lineSpacingExtra="2dp"
+				android:lineSpacingMultiplier="1"
+                android:gravity="center_horizontal"
+                android:text="@string/connecting_device_fail" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
